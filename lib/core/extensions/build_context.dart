@@ -10,3 +10,6 @@ extension AppColorsExtension on BuildContext {
   AppColors get colors => Theme.of(this).extension<AppColors>()!;
 }
 
+extension TextThemeExtension on BuildContext {
+  TextTheme get textTheme => Theme.of(this).textTheme;
+}

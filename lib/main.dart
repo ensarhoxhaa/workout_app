@@ -96,8 +96,9 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
+            Text(
               'You have pushed the button this many times:',
+              style: context.textTheme.titleLarge,
             ),
             Text(
               '$_counter',
