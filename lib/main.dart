@@ -72,7 +72,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
         // change color while the other colors stay the same.
-        backgroundColor: context.colors.color1,
+        backgroundColor: context.colors.primaryColor,
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(ref.read(appLocalizationsProvider).helloWorld),
@@ -98,7 +98,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
-              style: context.textTheme.titleLarge,
+              style: context.textStyles.headlineLarge,
             ),
             Text(
               '$_counter',

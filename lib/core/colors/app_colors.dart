@@ -1,26 +1,36 @@
 import 'package:flutter/material.dart';
 
+const Color lightThemePrimaryColor = Colors.deepPurple;
+const Color lightThemeSecondaryColor = Color(0xff9da3d5);
+const Color lightThemeBackgroundColor = Color(0xffffffff);
+const Color lightThemeTextColor = Color(0xff000000);
+
+const Color darkThemePrimaryColor = Colors.redAccent;
+const Color darkThemeSecondaryColor = Color(0xfffc797d);
+const Color darkThemeBackgroundColor = Color(0xff232323);
+const Color darkThemeTextColor = Color(0xffffffff);
+
 class AppColors extends ThemeExtension<AppColors> {
-  final Color? color1;
-  final Color? color2;
-  final Color? color3;
+  final Color? primaryColor;
+  final Color? secondaryColor;
+  final Color? backgroundColor;
 
   const AppColors({
-    required this.color1,
-    required this.color2,
-    required this.color3,
+    required this.primaryColor,
+    required this.secondaryColor,
+    required this.backgroundColor,
   });
 
   @override
   AppColors copyWith({
-    Color? color1,
-    Color? color2,
-    Color? color3,
+    Color? primaryColor,
+    Color? secondaryColor,
+    Color? backgroundColor,
   }) {
     return AppColors(
-      color1: color1 ?? this.color1,
-      color2: color2 ?? this.color2,
-      color3: color3 ?? this.color3,
+      primaryColor: primaryColor ?? this.primaryColor,
+      secondaryColor: secondaryColor ?? this.secondaryColor,
+      backgroundColor: backgroundColor ?? this.backgroundColor,
     );
   }
   @override
@@ -29,9 +39,9 @@ class AppColors extends ThemeExtension<AppColors> {
       return this;
     }
     return AppColors(
-      color1: Color.lerp(color1, other.color1, t),
-      color2: Color.lerp(color2, other.color2, t),
-      color3: Color.lerp(color3, other.color3, t),
+      primaryColor: Color.lerp(primaryColor, other.primaryColor, t),
+      secondaryColor: Color.lerp(secondaryColor, other.secondaryColor, t),
+      backgroundColor: Color.lerp(backgroundColor, other.backgroundColor, t),
     );
   }
 }

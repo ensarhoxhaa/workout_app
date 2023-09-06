@@ -1,76 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:workout_app/core/colors/app_colors.dart';
+import 'package:workout_app/core/text_styles/app_text_styles.dart';
 
 final lightThemeData = ThemeData(
   colorScheme: ColorScheme.fromSeed(
-    seedColor: Colors.deepPurple,
-    background: Colors.white,
+    seedColor: lightThemePrimaryColor,
+    background: lightThemeBackgroundColor,
   ),
   useMaterial3: true,
-  extensions: const <ThemeExtension<dynamic>>[
-    AppColors(
-      color1: Colors.orange,
-      color2: Colors.yellow,
-      color3: Colors.white,
+  extensions: <ThemeExtension<dynamic>>[
+    const AppColors(
+      primaryColor: lightThemePrimaryColor,
+      secondaryColor: lightThemeSecondaryColor,
+      backgroundColor: lightThemeBackgroundColor,
+    ),
+    AppTextStyles(
+      headlineLarge: headlineLarge.copyWith(color: lightThemeTextColor),
+      bodyMedium: bodyMedium.copyWith(color: lightThemeTextColor),
+      bodySmall: bodySmall.copyWith(color: lightThemeTextColor),
     ),
   ],
-  textTheme: const TextTheme(
-    titleLarge: TextStyle(
-      fontFamily: 'Roboto',
-      color: Colors.black,
-      fontSize: 32,
-      fontWeight: FontWeight.w700,
-    ),
-    labelMedium: TextStyle(
-      fontFamily: 'Roboto',
-      color: Colors.black54,
-      fontSize: 18,
-      fontWeight: FontWeight.w600,
-      height: 1.2,
-    ),
-    bodySmall: TextStyle(
-      fontFamily: 'Roboto',
-      color: Colors.black54,
-      fontSize: 12,
-      fontWeight: FontWeight.w500,
-      height: 1.2,
-    ),
-  ),
 );
 
 final darkThemeData = ThemeData(
   colorScheme: ColorScheme.fromSeed(
-    seedColor: Colors.deepPurple,
-    background: Colors.black26,
+    seedColor: darkThemePrimaryColor,
+    background: darkThemeBackgroundColor,
+    brightness: Brightness.dark,
   ),
   useMaterial3: true,
-  extensions: const <ThemeExtension<dynamic>>[
-    AppColors(
-      color1: Colors.red,
-      color2: Colors.blue,
-      color3: Colors.white,
+  extensions: <ThemeExtension<dynamic>>[
+    const AppColors(
+      primaryColor: darkThemePrimaryColor,
+      secondaryColor: darkThemeSecondaryColor,
+      backgroundColor: darkThemeBackgroundColor,
+    ),
+    AppTextStyles(
+      headlineLarge: headlineLarge.copyWith(color: darkThemeTextColor),
+      bodyMedium: bodyMedium.copyWith(color: darkThemeTextColor),
+      bodySmall: bodySmall.copyWith(color: darkThemeTextColor),
     ),
   ],
-  textTheme: const TextTheme(
-    titleLarge: TextStyle(
-      fontFamily: 'Roboto',
-      color: Colors.white,
-      fontSize: 32,
-      fontWeight: FontWeight.w700,
-    ),
-    labelMedium: TextStyle(
-      fontFamily: 'Roboto',
-      color: Colors.white70,
-      fontSize: 18,
-      fontWeight: FontWeight.w600,
-      height: 1.2,
-    ),
-    bodySmall: TextStyle(
-      fontFamily: 'Roboto',
-      color: Colors.white70,
-      fontSize: 12,
-      fontWeight: FontWeight.w500,
-      height: 1.2,
-    ),
-  ),
 );
