@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:workout_app/features/authentication/authentication.dart';
 
 const String _home = '/home';
 const String _login = '/login';
@@ -21,7 +22,7 @@ final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final goRouterProvider = Provider(
   (ref) {
     return GoRouter(
-      initialLocation: AppRoutes.home,
+      initialLocation: AppRoutes.login,
       debugLogDiagnostics: true,
       navigatorKey: _rootNavigatorKey,
       routes: [
@@ -34,7 +35,7 @@ final goRouterProvider = Provider(
         GoRoute(
           path: AppRoutes.login,
           pageBuilder: (context, state) => const NoTransitionPage(
-            child: SizedBox(),
+            child: LoginScreen(),
           ),
         ),
         GoRoute(

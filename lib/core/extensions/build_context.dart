@@ -16,3 +16,7 @@ extension TextThemeExtension on BuildContext {
 extension AppTextStylesExtension on BuildContext {
   AppTextStyles get textStyles => Theme.of(this).extension<AppTextStyles>()!;
 }
+
+extension FocusScopeExtension on BuildContext {
+  FocusScopeNode get focusScope => FocusScope.of(this);
+}

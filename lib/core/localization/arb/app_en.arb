@@ -1,6 +1,22 @@
 {
-  "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
-  }
+  "welcome": "Welcome",
+  "come": "Come",
+  "exit": "Exit",
+  "startPause": "Start pause",
+  "endPause": "End pause",
+
+  "enterPin": "Enter Pin",
+  "pleaseEnterPin": "Please enter your pin to proceed",
+  "enter": "Enter",
+  "cancel": "Cancel",
+
+  "welcomeToTimeInk": "Welcome to TimeInk",
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+
+  "invalidEmailMessage": "Please enter a valid email address!",
+  "emptyEmailMessage": "Please enter a email address!",
+  "invalidCredentials": "You have entered an invalid username or password",
+  "unknownError": "An unknown error has occurred"
 }

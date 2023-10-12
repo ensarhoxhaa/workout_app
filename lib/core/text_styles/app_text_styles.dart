@@ -1,44 +1,65 @@
 import 'package:flutter/material.dart';
 
 const TextStyle headlineLarge = TextStyle(
-  fontFamily: 'Roboto',
+  fontFamily: 'Segoe',
   fontSize: 32,
+  fontWeight: FontWeight.w600,
+);
+
+const TextStyle bodyLarge = TextStyle(
+  fontSize: 24,
+  fontFamily: 'Segoe',
+  fontWeight: FontWeight.w600,
+);
+
+const TextStyle headlineMedium = TextStyle(
+  fontSize: 20,
+  fontFamily: 'Segoe',
   fontWeight: FontWeight.w700,
 );
-const TextStyle bodyMedium = TextStyle(
-  fontFamily: 'Roboto',
-  fontSize: 18,
-  fontWeight: FontWeight.w600,
-  height: 1.2,
-);
+
 const TextStyle bodySmall = TextStyle(
-  fontFamily: 'Roboto',
-  fontSize: 12,
-  fontWeight: FontWeight.w500,
-  height: 1.2,
+  fontSize: 14,
+  fontFamily: 'Segoe',
+  fontWeight: FontWeight.w400,
+);
+
+const TextStyle bodyMedium = TextStyle(
+  fontSize: 18,
+  fontFamily: 'Segoe',
+  fontWeight: FontWeight.w600,
 );
 
 class AppTextStyles extends ThemeExtension<AppTextStyles> {
-  final TextStyle? headlineLarge;
-  final TextStyle? bodyMedium;
-  final TextStyle? bodySmall;
 
   const AppTextStyles({
     required this.headlineLarge,
-    required this.bodyMedium,
+    required this.bodyLarge,
     required this.bodySmall,
+    required this.bodyMedium,
+    required this.headlineMedium,
   });
+
+  final TextStyle? headlineLarge;
+  final TextStyle? bodyLarge;
+  final TextStyle? bodySmall;
+  final TextStyle? bodyMedium;
+  final TextStyle? headlineMedium;
 
   @override
   AppTextStyles copyWith({
     TextStyle? headlineLarge,
-    TextStyle? bodyMedium,
+    TextStyle? bodyLarge,
     TextStyle? bodySmall,
+    TextStyle? bodyMedium,
+    TextStyle? headlineMedium,
   }) {
     return AppTextStyles(
       headlineLarge: headlineLarge ?? this.headlineLarge,
-      bodyMedium: bodyMedium ?? this.bodyMedium,
+      bodyLarge: bodyLarge ?? this.bodyLarge,
       bodySmall: bodySmall ?? this.bodySmall,
+      bodyMedium: bodyMedium ?? this.bodyMedium,
+      headlineMedium: headlineMedium ?? this.headlineMedium,
     );
   }
 
@@ -49,8 +70,10 @@ class AppTextStyles extends ThemeExtension<AppTextStyles> {
     }
     return AppTextStyles(
       headlineLarge: TextStyle.lerp(headlineLarge, other.headlineLarge, t),
-      bodyMedium: TextStyle.lerp(bodyMedium, other.bodyMedium, t),
+      bodyLarge: TextStyle.lerp(bodyLarge, other.bodyLarge, t),
       bodySmall: TextStyle.lerp(bodySmall, other.bodySmall, t),
+      bodyMedium: TextStyle.lerp(bodyMedium, other.bodyMedium, t),
+      headlineMedium: TextStyle.lerp(headlineMedium, other.headlineMedium, t),
     );
   }
 }

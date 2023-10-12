@@ -15,9 +15,11 @@ final lightThemeData = ThemeData(
       backgroundColor: lightThemeBackgroundColor,
     ),
     AppTextStyles(
-      headlineLarge: headlineLarge.copyWith(color: lightThemeTextColor),
-      bodyMedium: bodyMedium.copyWith(color: lightThemeTextColor),
+      headlineLarge: headlineLarge.copyWith(color: lightThemeSecondaryColor),
+      bodyLarge: bodyLarge.copyWith(color: lightThemeTextColor),
       bodySmall: bodySmall.copyWith(color: lightThemeTextColor),
+      bodyMedium: bodyMedium.copyWith(color: lightThemeTextColor),
+      headlineMedium: headlineMedium.copyWith(color: lightThemeTextColor),
     ),
   ],
 );
@@ -37,8 +39,10 @@ final darkThemeData = ThemeData(
     ),
     AppTextStyles(
       headlineLarge: headlineLarge.copyWith(color: darkThemeTextColor),
-      bodyMedium: bodyMedium.copyWith(color: darkThemeTextColor),
+      bodyLarge: bodyLarge.copyWith(color: darkThemeTextColor),
       bodySmall: bodySmall.copyWith(color: darkThemeTextColor),
+      bodyMedium: bodyMedium.copyWith(color: darkThemeTextColor),
+      headlineMedium: headlineMedium.copyWith(color: darkThemeTextColor),
     ),
   ],
 );
